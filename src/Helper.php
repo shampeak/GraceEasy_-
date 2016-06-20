@@ -160,3 +160,24 @@
         }
     }
 
+//页面跳转
+function R($url, $time=0, $msg='') {
+    $url = str_replace(array("\n", "\r"), '', $url);
+    if (empty($msg))
+        $msg = "系统将在{$time}秒之后自动跳转到{$url}！";
+    if (!headers_sent()) {
+        // redirect
+        if (0 === $time) {
+            header('Location: ' . $url);
+        } else {
+            header("refresh:{$time};url={$url}");
+            echo($msg);
+        }
+        exit();
+    } else {
+        $str = "<meta http-equiv='Refresh' content='{$time};URL={$url}'>";
+        if ($time != 0)
+            $str .= $msg;
+        exit($str);
+    }
+}

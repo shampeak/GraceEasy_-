@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-17 00:41:16
+/* Smarty version 3.1.29, created on 2016-06-19 16:44:55
   from "C:\www\Grace\GraceEasy\App\Library\Smarty\debug.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5762d6ac4f3613_39621564',
+  'unifunc' => 'content_57665b874bca72_85425084',
   'file_dependency' => 
   array (
     '9f8ba35dc036d54e8612ddb6e1cd740c0fcc1900' => 
     array (
       0 => 'C:\\www\\Grace\\GraceEasy\\App\\Library\\Smarty\\debug.tpl',
-      1 => 1465802393,
+      1 => 1466147908,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5762d6ac4f3613_39621564 ($_smarty_tpl) {
+function content_57665b874bca72_85425084 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_debug_print_var')) require_once 'C:\\www\\Grace\\GraceEasy\\App\\Library\\Smarty\\plugins\\modifier.debug_print_var.php';
 $_smarty_tpl->_cache['capture_stack'][] = array('_smarty_debug', 'debug_output', null); ob_start(); ?>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
