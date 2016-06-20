@@ -1,13 +1,1 @@
-{
-    "title": "grace/easy",
-    "description": "dev",
-	"type":"list/all",
-	"list":[
-		"IDE",
-		"持续集成",
-		"集成环境",
-		"单元测试",
-		"Composer"
-	],
-	"说明":"路由 ?chr=phpzhidao&wz=集成环境- 翻译过来就是 读取phpzhidao/index.json 和集成环境.md 然后显示"
-}
+{"chr":"phpzhidao","title":"grace\/easy","description":"dev","type":"0","list":{"unit":{"sort":"1","chr":"unit","title":"---","des":"asdf"},"Composer":{"sort":"2","chr":"Composer","title":"asdf1","des":" ok1"},"IDE":{"sort":"2","chr":"IDE","title":"asdf","des":" ok2"}},"button":"\u63d0\u4ea4"}

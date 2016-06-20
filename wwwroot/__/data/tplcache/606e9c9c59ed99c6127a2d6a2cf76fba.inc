@@ -1,0 +1,1 @@
+<li class="lie"><a href="/spbf/2016/0616/18.html">[field:image/]</a></li>

@@ -19,6 +19,8 @@ class MdModel
     //读取json文件或得到的数据
     private $jsonfile   = array();
 
+    private $res   = array();       //要返回的结果集
+
     public function setchr($chr = 'Index')
     {
         if(!$chr)$chr = 'Index';
@@ -64,7 +66,7 @@ if($this->chr == 'Index'){
         $list[$value] = $_list;
     }
     $res['title']   =$this->jsonfile['title'];
-    $res['descrijption'] =$this->jsonfile['descrijption'];
+    $res['description'] =$this->jsonfile['description'];
     $res['list']    = $list;
 }else{
     //对于这个 title 和des 通过读取文件得到
@@ -75,6 +77,8 @@ if($this->chr == 'Index'){
         //读取文件
         $nr = file_get_contents($file);
         $sp = explode("\n",$nr);
+
+//echo mb_convert_encoding("妳係我的友仔", "UTF-8", "GBK");
 
 
         foreach($sp as $k=> $v){
@@ -94,7 +98,7 @@ if($this->chr == 'Index'){
         $list[$value] = $_list;
     }
     $res['title']   =$this->jsonfile['title'];
-    $res['descrijption'] =$this->jsonfile['descrijption'];
+    $res['description'] =$this->jsonfile['description'];
     $res['list']    = $list;
 }
 
@@ -119,9 +123,11 @@ if($this->chr == 'Index'){
             foreach($dirall as $v){
                 if(strpos($v,'.md'))
                     $res[] = trim($v,'.md');
+
             }
         }
-        if(!$res)$res= array();
+        if(empty($res))$res= array();
+
         $this->jsoninfo = $res;
         return $this;
 
@@ -160,6 +166,67 @@ if($this->chr == 'Index'){
         file_put_contents($file,$value);
     }
 
+    //判断是否utf8编码
+    //返回 1 表示纯 ASCII(即是所有字符都不大于127)
+    //返回 2 表示UTF8
+    //返回 0 表示正常gb编码
+    public function TestUtf8($text)
+    {
+        if(strlen($text) < 3) return false;
+        $lastch = 0;
+        $begin = 0;
+        $BOM = true;
+        $BOMchs = array(0xEF, 0xBB, 0xBF);
+        $good = 0;
+        $bad = 0;
+        $notAscii = 0;
+        for($i=0; $i < strlen($text); $i++)
+        {
+            $ch = ord($text[$i]);
+            if($begin < 3)
+            {
+                $BOM = ($BOMchs[$begin]==$ch);
+                $begin += 1;
+                continue;
+            }
 
+            if($begin==4 && $BOM) break;
+
+            if($ch >= 0x80 ) $notAscii++;
+
+            if( ($ch&0xC0) == 0x80 )
+            {
+                if( ($lastch&0xC0) == 0xC0 )
+                {
+                    $good += 1;
+                }
+                else if( ($lastch&0x80) == 0 )
+                {
+                    $bad += 1;
+                }
+            }
+            else if( ($lastch&0xC0) == 0xC0 )
+            {
+                $bad += 1;
+            }
+            $lastch = $ch;
+        }
+        if($begin == 4 && $BOM)
+        {
+            return 2;
+        }
+        else if($notAscii==0)
+        {
+            return 1;
+        }
+        else if ($good >= $bad )
+        {
+            return 2;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 
 }

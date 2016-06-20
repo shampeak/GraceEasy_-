@@ -17,26 +17,35 @@
 <table width="50%" border="1">
   <tr>
     <td width="60">sort</td>
-    <td>{$lminfo['sort']}</td>
+    <td>{$info['sort']}</td>
   </tr>
   <tr>
     <td>chr</td>
-    <td>{$lminfo['chr']}</td>
+    <td>{$info['chr']}</td>
   </tr>
   <tr>
     <td>title</td>
-    <td>{$lminfo['title']}</td>
+    <td>{$info['title']}</td>
   </tr>
   <tr>
     <td>des</td>
-    <td>{$lminfo['des']}</td>
+    <td>{$info['des']}</td>
   </tr>
   <tr>
     <td>path</td>
-    <td>{$lminfo['path']}</td>
+    <td>{$info['path']}</td>
   </tr>
 </table>
 <p>&nbsp;</p>
+<form name="form1" method="post" action="">
+      <input name="chr" type="hidden" value="{$chr}">
+      <input name="title" type="hidden" value="{$res['title']}">
+      <input name="description" type="hidden" value="{$res['description']}">
+      <input name="type" type="radio" value="0" {if $res['type']!=1}checked{/if}>
+      收起
+      <input type="radio" name="type" value="1" {if $res['type']==1}checked{/if}>
+      展开
+
 <table width="99%" border="1">
   <tr>
     <td height="30">序号</td>
@@ -44,13 +53,14 @@
     <td>title</td>
     <td>des</td>
   </tr>
-  {foreach from=$respath item=value name=foo}
+  {foreach from=$res['list'] key=key item=value name=foo}
   <tr>
-    <td height="30"><input name="list[{$value}][sort]" type="text" value="{$smarty.foreach.foo.index}" size="5" maxlength="5"></td>
-    <td height="30"><input type="hidden" name="list[{$value}][chr]" value="{$value}">
-      <a href='/admin/lm/?chr={$value}'>{$value}</a></td>
-    <td><input type="text" name="list[{$value}][title]" value="{$resjson['list'][$value]['title']}"></td>
-    <td><input name="list[{$value}][des]" type="text" size="60" maxlength="60" value="{$resjson['list'][$value]['des']}"></td>
+    <td height="30"><input name="list[{$key}][sort]" type="text" value="{$smarty.foreach.foo.index}" size="5" maxlength="5"></td>
+    
+    <td height="30"><input type="hidden" name="list[{$key}][chr]" value="{$value['chr']}">
+      <a href='/admin/lm/?chr={$value['chr']}'>{$value['chr']}</a></td>
+    <td><input type="text" name="list[{$key}][title]" value="{$value['title']}"></td>
+    <td><input name="list[{$key}][des]" type="text" size="60" maxlength="60" value="{$value['des']}"></td>
   </tr>
   {/foreach}
   <tr>
@@ -59,6 +69,7 @@
     </p></td>
   </tr>
 </table>
+</form>
 <pre>&nbsp;</pre>
 <p>&nbsp;</p>
 </body>

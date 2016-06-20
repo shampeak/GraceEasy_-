@@ -10,15 +10,10 @@ class Home extends BaseController {
 
     public function doIndex()
     {
-
-
-
-
-$res = app('db')->getall("select * from addons");
-D($res);
-
+        $res = Model('md')->getar();
+//D($res);
         view('',[
-            'title'=>'yang'
+            'res'=> $res
         ]);
     }
 
