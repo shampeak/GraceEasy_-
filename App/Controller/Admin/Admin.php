@@ -80,12 +80,22 @@ class Admin extends BaseController {
     {
 
         $res = Model('md')->getar();
-       // D($res);
+        // D($res);
 
         //遍历下面有哪些目录
         view('',[
             'res'=>$res
         ]);
     }
+
+
+    //首页的示例
+    public function doDemo()
+    {
+//        app('cookies')->set('sham',123,600);      //设置cookie
+//        echo  app('cookies')->get('sham');        //读取cookie
+    }
+
+
 
 }

@@ -26,7 +26,7 @@ class Lm extends BaseController {
         $nr = app('Parsedown')->text($nr);
 
 
-        //计算上一页 下一页
+        //计算上一�? 下一�?
         $list  = $res['list'];
         foreach($list as $key=>$value){
             $vs[] = $key;
@@ -38,11 +38,11 @@ class Lm extends BaseController {
         for($i=0;$i<=(count($vs)-1);$i++){
 
             if($child == $vs[$i]){
-                //去三个值,栈里面的,当前的,和后面的 组成新的数组
+                //去三个�??,栈里面的,当前�?,和后面的 组成新的数组
                 $one = array_pop($zha);
                 $two = $child;
-                //$three = (count($vs)==($i+1))?"":next($vs);             //有可能是最后一个报错
-                $three = (count($vs)==($i+1))?"":$vs[$i+1];             //有可能是最后一个报错
+                //$three = (count($vs)==($i+1))?"":next($vs);             //有可能是�?后一个报�?
+                $three = (count($vs)==($i+1))?"":$vs[$i+1];             //有可能是�?后一个报�?
                 $page = array($one,$two,$three);
 
                 break;
@@ -51,7 +51,7 @@ class Lm extends BaseController {
         }
 
 
-        //D($ar);         //是上一页 本页 和下一页
+        //D($ar);         //是上�?�? 本页 和下�?�?
 
         view('',[
             'res'   => $res,
@@ -70,7 +70,7 @@ class Lm extends BaseController {
         //D($res['list']);
         //---------------------------------------
         if($res['type']){
-            //需要循环读取每个文件的内容,生成前端页面显示,就没有下级页面了
+            //�?要循环读取每个文件的内容,生成前端页面显示,就没有下级页面了
 //            D($res['list']);
             foreach($res['list'] as $key=>$value){
                 $file = $this->storeroot.$chr.'/'.$key.'.md';

@@ -12,6 +12,7 @@ return [
         'Dsn'      => '../App/Config/Dsn.php',
         'Smarty'   => '../App/Config/Smarty.php',
         'Db'       => '../App/Config/Db.php',
+        'Cookies'  => '../App/Config/Cookies.php',
     ],
 
     'Providers'=>[
@@ -26,6 +27,7 @@ return [
         'Db'        => Grace\Db\Db::class,           //
         'Markdown'  => Michelf\Markdown::class,
         'Parsedown' => Parsedown::class,
+        'Cookies'   => Grace\Cookies\Cookies::class,
     ],
 
 ];
