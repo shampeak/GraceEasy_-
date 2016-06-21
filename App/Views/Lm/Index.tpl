@@ -36,17 +36,13 @@
   
   
 <ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">chr</a></li>
+  <li><a href="/">首页</a></li>
+  <li><a href="javascript:void(0)">{$res['title']}</a></li>
 </ol>  
 <div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
-    PHP之道
-  </a>
   {foreach from=$res['list'] key=key item=value name=foo}
-  <a href="lm?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
+  <a href="lm/view?chr={$res['chr']}&child={$value['chr']}" class="list-group-item">{$value['title']}</a>
   {/foreach}
-  <a href="lm?chr={$value['chr']}" class="list-group-item">123</a>
 </div>  
   
 

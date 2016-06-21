@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-19 20:16:39
+/* Smarty version 3.1.29, created on 2016-06-21 00:13:29
   from "C:\www\Grace\GraceEasy\App\Views\Admin\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57668d2739c1b0_54300895',
+  'unifunc' => 'content_5768162954f8e4_47784326',
   'file_dependency' => 
   array (
     '5601fd95fed2a2fe1baa8e16aba6e849f3d8429c' => 
     array (
       0 => 'C:\\www\\Grace\\GraceEasy\\App\\Views\\Admin\\Index.tpl',
-      1 => 1466338596,
+      1 => 1466424936,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57668d2739c1b0_54300895 ($_smarty_tpl) {
+function content_5768162954f8e4_47784326 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -79,26 +79,31 @@ $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
 
     <tr>
-      <td height="30"><input name="list[<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
+      <td height="30"><input name="list[<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 ][sort]" type="text" value="<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null);?>
 " size="5" maxlength="5"><?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 </td>
-    <td height="30"><input type="hidden" name="list[<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
-][chr]" value="<?php echo $_smarty_tpl->tpl_vars['value']->value;?>
+      
+      
+      
+    <td height="30"><input type="hidden" name="list[<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+][chr]" value="<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
 "><a href='/admin/lm/?chr=<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
 '><?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
 </a></td>
     
-      <td> <input type="text" name="list[<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
-][title]" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['list'][$_smarty_tpl->tpl_vars['value']->value['chr']]['title'];?>
+    
+    
+      <td> <input type="text" name="list[<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+][title]" value="<?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 "></td>
       
-      <td> <input name="list[<?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-][des]" type="text" size="60" maxlength="60" value="<?php echo $_smarty_tpl->tpl_vars['resjson']->value['list'][$_smarty_tpl->tpl_vars['value']->value]['des'];?>
+      <td> <input name="list[<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+][des]" type="text" size="60" maxlength="60" value="<?php echo $_smarty_tpl->tpl_vars['value']->value['des'];?>
 "></td>
-    <td><input name="list[<?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-][path]" type="hidden" size="60" maxlength="60" value="?lm=<?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-">?lm=<?php echo $_smarty_tpl->tpl_vars['value']->value;?>
+    <td><input name="list[<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+][path]" type="hidden" size="60" maxlength="60" value="?chr=<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
+"><?php echo $_smarty_tpl->tpl_vars['value']->value['path'];?>
 </td>
   </tr>
     <?php

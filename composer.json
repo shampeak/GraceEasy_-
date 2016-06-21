@@ -12,13 +12,15 @@
     "minimum-stability": "dev",
     "require": {
         "php" : ">=5.5.9",
-        "lulu/db-driver": "^1.0@dev"
+        "lulu/db-driver": "^1.0@dev",
+        "erusev/parsedown": "^1.6"
     },
     "autoload":{
         "files": ["src/Helper.php"],
         "psr-4":{
             "Grace\\": "src",
-            "App\\": "App"
+            "App\\": "App",
+	    "Michelf\\":"App\\Library\\Michelf"
         }
     }
 }

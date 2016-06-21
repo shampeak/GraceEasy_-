@@ -12,7 +12,7 @@ return [
         'ConfigDir'     => APPROOT.'Views/SmartyConfigs/',
         'CompileDir'    => APPROOT.'Cache/SmartyTemplates_c/',
         'CacheDir'      => APPROOT.'Cache/SmartyCache/',
-        'debugging'     => true,
+        'debugging'     => false,
         'caching'       => false,
         'cache_lifetime'=> 120
 

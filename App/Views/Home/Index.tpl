@@ -36,7 +36,7 @@
   
 <div class="list-group">
   <a href="javascript:void(0)" class="list-group-item active">
-    PHP之道
+    Shampeak's PHP之道
   </a>
   {foreach from=$res['list'] key=key item=value name=foo}
   <a href="lm?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
@@ -52,7 +52,7 @@
 </div>
 
 
-
+改进 栏目后面加符号 >
 
 
 

@@ -25,6 +25,7 @@ class Admin extends BaseController {
         //小的前面
         $res['list'] = $list;
         $json = json_encode($res);
+
         file_put_contents($this->storeroot.$res['chr'].'/Index.json',$json);
         //wanbi
         R('/admin/lm/?chr='.$res['chr']);

@@ -67,6 +67,7 @@ if($this->chr == 'Index'){
     }
     $res['title']   =$this->jsonfile['title'];
     $res['description'] =$this->jsonfile['description'];
+    $res['chr']     =$this->chr;
     $res['list']    = $list;
 }else{
     //对于这个 title 和des 通过读取文件得到
@@ -75,7 +76,7 @@ if($this->chr == 'Index'){
     foreach($chrlist as $value){
         $file = $this->storeroot.$this->chr.'/'.$value.'.md';
         //读取文件
-        $nr = file_get_contents($file);
+        $nr = @file_get_contents($file);
         $sp = explode("\n",$nr);
 
 //echo mb_convert_encoding("妳係我的友仔", "UTF-8", "GBK");
@@ -85,8 +86,11 @@ if($this->chr == 'Index'){
             if(empty(trim($v)))unset($sp[$k]);
         }
 
-        $title = trim(trim(trim(array_pop($sp),"\r"),'#'),'>');
-        $des = trim(trim(trim(array_pop($sp),"\r"),'#'),'>');
+        reset($sp);
+        $title = trim(trim(trim(current($sp),"\r"),'#'),'>');
+
+        $des = trim(trim(trim(next($sp),"\r"),'#'),'>');
+
 
         $_list = array();
         $_list['sort'] = $i;
@@ -99,6 +103,8 @@ if($this->chr == 'Index'){
     }
     $res['title']   =$this->jsonfile['title'];
     $res['description'] =$this->jsonfile['description'];
+    $res['chr']     =$this->chr;
+    $res['type']     =$this->jsonfile['type'];
     $res['list']    = $list;
 }
 

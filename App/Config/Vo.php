@@ -24,6 +24,8 @@ return [
         'View'      => Grace\View\View::class,           //
         'Smarty'    => Grace\Smarty\Smarty::class,           //
         'Db'        => Grace\Db\Db::class,           //
+        'Markdown'  => Michelf\Markdown::class,
+        'Parsedown' => Parsedown::class,
     ],
 
 ];

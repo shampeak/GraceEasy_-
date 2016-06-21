@@ -39,8 +39,8 @@
 <p>&nbsp;</p>
 <form name="form1" method="post" action="">
       <input name="chr" type="hidden" value="{$chr}">
-      <input name="title" type="hidden" value="{$res['title']}">
-      <input name="description" type="hidden" value="{$res['description']}">
+      <input name="title" type="hidden" value="{$info['title']}">
+      <input name="description" type="hidden" value="{$info['description']}">
       <input name="type" type="radio" value="0" {if $res['type']!=1}checked{/if}>
       收起
       <input type="radio" name="type" value="1" {if $res['type']==1}checked{/if}>
