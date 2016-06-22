@@ -7,7 +7,7 @@
 	<meta name="description" content="{$res['description']}">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>{$res['title']}</title>
-   
+
     <!-- Bootstrap -->
     <link href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,10 +39,10 @@
     Shampeak's PHP之道
   </a>
   {foreach from=$res['list'] key=key item=value name=foo}
-  <a href="lm?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
+  <a href="/lm/index?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
   {/foreach}
 </div>  
-  
+
 
   </div>
 </div>

@@ -7,7 +7,9 @@ namespace App\Controller;
 class BaseController{
 
     public function __construct(){
+        Model('login')->iflogin();
     }
+
 
     public function actions()
     {

@@ -14,7 +14,7 @@ class Admin extends BaseController {
 
     public function doLmPost()
     {
-
+        Model('login')->iflogin();
 //paixu$list
         $res = req('Post');
         $list = $_POST['list'];
@@ -34,8 +34,7 @@ class Admin extends BaseController {
     //对栏目进行设置
     public function doLm()
     {
-
-
+        Model('login')->iflogin();
         $chr = req('Get')['chr'];
         $resindex = Model('md')->getar();
         $info = $resindex['list'][$chr];
@@ -56,7 +55,7 @@ class Admin extends BaseController {
     //首页响应
     public function doIndexPost()
     {
-
+        Model('login')->iflogin();
         //paixu$list
         $res = $_POST;
         $list = $_POST['list'];
@@ -78,7 +77,7 @@ class Admin extends BaseController {
     //首页的
     public function doIndex()
     {
-
+        Model('login')->iflogin();
         $res = Model('md')->getar();
         // D($res);
 
@@ -94,6 +93,28 @@ class Admin extends BaseController {
     {
 //        app('cookies')->set('sham',123,600);      //设置cookie
 //        echo  app('cookies')->get('sham');        //读取cookie
+    }
+
+    public function doLogin()
+    {
+        view('',[
+            'res'=>''
+        ]);
+    }
+    //响应登录
+    public function doLoginPost()
+    {
+        $user = array("irones"=>"irones");
+        $loginName = req('Post')['userName'];
+        $loginPsd  = req('Post')['password'];
+        $cookiePsd = app('cookies')->get($loginName);
+        //D($cookiePsd);
+        if($cookiePsd&&$cookiePsd==$loginPsd)R('/home/index');
+        if($user[$loginName] == $loginPsd){
+            app('cookies')->set('irones',$loginPsd);
+            R('/home/index');
+        }
+        R('/admin/login');
     }
 
 

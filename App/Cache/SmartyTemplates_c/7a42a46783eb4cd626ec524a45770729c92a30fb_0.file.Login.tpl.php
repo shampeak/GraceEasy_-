@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-06-21 19:32:46
+  from "E:\GraceEasy\App\Views\Admin\Login.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_576925de1bb984_17290831',
+  'file_dependency' => 
+  array (
+    '7a42a46783eb4cd626ec524a45770729c92a30fb' => 
+    array (
+      0 => 'E:\\GraceEasy\\App\\Views\\Admin\\Login.tpl',
+      1 => 1466508658,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_576925de1bb984_17290831 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,4 +51,5 @@
     </div>
 </form>
 </body>
-</html>
+</html><?php }
+}
