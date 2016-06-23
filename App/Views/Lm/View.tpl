@@ -11,12 +11,6 @@
     <!-- Bootstrap -->
     <link href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   <style>
     #te {
 		padding-left: 0px;
@@ -45,7 +39,13 @@
           <li><a href="javascript:void(0)">{$res['list'][$child]['title']}</a></li>
         </ol>  
         
-        
+<nav>
+  <ul class="pagination">
+    <li>{if $page[0] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[0]}">上一页</a>{/if}</li>
+    <li><a href="javascript:void(0)">{$res['list'][$page[1]]['title']}</a></li>
+    <li>{if $page[2] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[2]}">下一页</a>{/if}</li>
+  </ul>
+</nav> 
         
         <div id='text'>
                 <div class="panel panel-default">
@@ -65,18 +65,10 @@
   </ul>
 </nav>      
       
-      
       </div>
-      
-      
     </div>
 
-
-
 </div>
-    <script src="/assets/jquery-1.11.1.min.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
   </body>
 </html>
