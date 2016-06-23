@@ -36,7 +36,7 @@
   
 <div class="list-group">
   <a href="javascript:void(0)" class="list-group-item active">
-    Shampeak's PHP之道
+    PHP之路
   </a>
   {foreach from=$res['list'] key=key item=value name=foo}
   <a href="lm?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
