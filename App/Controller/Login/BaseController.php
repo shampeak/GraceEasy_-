@@ -7,7 +7,6 @@ namespace App\Controller;
 class BaseController{
 
     public function __construct(){
-        app('Adminauth')->isLoginRedirect('/login/');
     }
 
     public function AjaxReturn($res = []){

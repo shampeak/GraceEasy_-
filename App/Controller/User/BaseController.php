@@ -7,7 +7,7 @@ namespace App\Controller;
 class BaseController{
 
     public function __construct(){
-        app('Adminauth')->isLoginRedirect('/login/');
+
     }
 
     public function AjaxReturn($res = []){
@@ -17,6 +17,7 @@ class BaseController{
             $res['code']    = $res['code']?:200;
             $res['msg']     = $res['msg']?:(($res['code']>0)?'suceed':'error');
             $res['js']      = $res['js']?:'if(data.code>0){/*alert("操作成功");*/location.reload();}else{alert(data.msg);}';
+            //'js'   => 'window.location.href="/user/"'
         }
         echo json_encode($res);
         exit;

@@ -13,6 +13,7 @@ return [
         'Smarty'   => '../App/Config/Smarty.php',
         'Db'       => '../App/Config/Db.php',
         'Cookies'  => '../App/Config/Cookies.php',
+        'Adminauth'  => '../App/Config/Adminauth.php',
     ],
 
     'Providers'=>[
@@ -28,6 +29,7 @@ return [
         'Markdown'  => Michelf\Markdown::class,
         'Parsedown' => Parsedown::class,
         'Cookies'   => Grace\Cookies\Cookies::class,
+        'Adminauth'   => Grace\Adminauth\Adminauth::class,
     ],
 
 ];
