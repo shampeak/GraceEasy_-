@@ -42,6 +42,7 @@
         <ol class="breadcrumb">
           <li><a href="/">首页</a></li>
           <li><a href="javascript:void(0)">{$res['title']}</a></li>
+          <li><a href="/admin/logout">登出</a></li>
         </ol>  
         
         

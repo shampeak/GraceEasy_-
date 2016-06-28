@@ -35,9 +35,12 @@
   <div class="col-md-12" id="te">
   
 <div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
+  <ol class="breadcrumb ">
+  <li><a href="javascript:void(0)" >
     Shampeak's PHP之道
-  </a>
+  </a></li>
+  <li><a href="/admin/logout">登出</a></li>
+  </ol>
   {foreach from=$res['list'] key=key item=value name=foo}
   <a href="/lm/index?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
   {/foreach}

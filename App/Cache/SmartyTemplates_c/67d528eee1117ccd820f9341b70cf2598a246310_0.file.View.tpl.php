@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-28 18:00:30
-  from "E:\GraceEasy\App\Views\Lm\Indexext.tpl" */
+/* Smarty version 3.1.29, created on 2016-06-28 17:52:41
+  from "E:\GraceEasy\App\Views\Lm\View.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57724abeb45811_19692253',
+  'unifunc' => 'content_577248e9737101_39737590',
   'file_dependency' => 
   array (
-    '88c42676737394b86308b20b48bc0d043740e2a3' => 
+    '67d528eee1117ccd820f9341b70cf2598a246310' => 
     array (
-      0 => 'E:\\GraceEasy\\App\\Views\\Lm\\Indexext.tpl',
-      1 => 1467107469,
+      0 => 'E:\\GraceEasy\\App\\Views\\Lm\\View.tpl',
+      1 => 1467107486,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57724abeb45811_19692253 ($_smarty_tpl) {
+function content_577248e9737101_39737590 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -70,7 +70,10 @@ function content_57724abeb45811_19692253 ($_smarty_tpl) {
           
         <ol class="breadcrumb">
           <li><a href="/">首页</a></li>
-          <li><a href="javascript:void(0)"><?php echo $_smarty_tpl->tpl_vars['res']->value['title'];?>
+          <li><a href="http://ge.so/lm?chr=<?php echo $_smarty_tpl->tpl_vars['chr']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['res']->value['title'];?>
+</a></li>
+          <li><a href="javascript:void(0)"><?php echo $_smarty_tpl->tpl_vars['res']->value['list'][$_smarty_tpl->tpl_vars['child']->value]['title'];?>
 </a></li>
           <li><a href="/admin/logout">登出</a></li>
         </ol>  
@@ -78,47 +81,32 @@ function content_57724abeb45811_19692253 ($_smarty_tpl) {
         
         
         <div id='text'>
-            <?php
-$_from = $_smarty_tpl->tpl_vars['list']->value;
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_foo_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo'] : false;
-$__foreach_foo_0_saved_item = isset($_smarty_tpl->tpl_vars['value']) ? $_smarty_tpl->tpl_vars['value'] : false;
-$__foreach_foo_0_saved_key = isset($_smarty_tpl->tpl_vars['key']) ? $_smarty_tpl->tpl_vars['key'] : false;
-$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['__smarty_foreach_foo'] = new Smarty_Variable(array('index' => -1));
-$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['value']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->_loop = true;
-$_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']++;
-$__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
-?>
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div id="vsdr<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null);?>
-"><?php echo $_smarty_tpl->tpl_vars['nr']->value[$_smarty_tpl->tpl_vars['value']->value['chr']];?>
+"><?php echo $_smarty_tpl->tpl_vars['nr']->value;?>
 </div>
                   </div>
                 </div>
-            <?php
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_local_item;
-}
-if ($__foreach_foo_0_saved) {
-$_smarty_tpl->tpl_vars['__smarty_foreach_foo'] = $__foreach_foo_0_saved;
-}
-if ($__foreach_foo_0_saved_item) {
-$_smarty_tpl->tpl_vars['value'] = $__foreach_foo_0_saved_item;
-}
-if ($__foreach_foo_0_saved_key) {
-$_smarty_tpl->tpl_vars['key'] = $__foreach_foo_0_saved_key;
-}
-?>
         </div>
     
     
+      
+<nav>
+  <ul class="pagination">
+    <li><?php if ($_smarty_tpl->tpl_vars['page']->value[0] != '') {?><a href="/lm/view?chr=phpzhidao&child=<?php echo $_smarty_tpl->tpl_vars['page']->value[0];?>
+">上一页</a><?php }?></li>
+    <li><a href="javascript:void(0)"><?php echo $_smarty_tpl->tpl_vars['res']->value['list'][$_smarty_tpl->tpl_vars['page']->value[1]]['title'];?>
+</a></li>
+    <li><?php if ($_smarty_tpl->tpl_vars['page']->value[2] != '') {?><a href="/lm/view?chr=phpzhidao&child=<?php echo $_smarty_tpl->tpl_vars['page']->value[2];?>
+">下一页</a><?php }?></li>
+  </ul>
+</nav>      
+      
+      
       </div>
+      
+      
     </div>
 
 

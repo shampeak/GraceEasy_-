@@ -23,7 +23,6 @@ class Bootstrap
         /*系统级配置*/
         dc(\Grace\Vo\Vo::getInstance(include(APPROOT.'Config/Vo.php'))->ObjectConfig['Config']);
 
-
         $get = app('req')->get;
         $controller = ($get['c']?:(isset($get['C'])?$get['C']:''))?:'Home';
         $mothed     = ($get['a']?:(isset($get['A'])?$get['A']:''))?:'Index';

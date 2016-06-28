@@ -43,6 +43,7 @@
           <li><a href="/">首页</a></li>
           <li><a href="http://ge.so/lm?chr={$chr}">{$res['title']}</a></li>
           <li><a href="javascript:void(0)">{$res['list'][$child]['title']}</a></li>
+          <li><a href="/admin/logout">登出</a></li>
         </ol>  
         
         

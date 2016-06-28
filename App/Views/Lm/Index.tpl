@@ -38,10 +38,11 @@
 <ol class="breadcrumb">
   <li><a href="/">首页</a></li>
   <li><a href="javascript:void(0)">{$res['title']}</a></li>
+  <li><a href="/admin/logout">登出</a></li>
 </ol>  
 <div class="list-group">
   {foreach from=$res['list'] key=key item=value name=foo}
-  <a href="lm/view?chr={$res['chr']}&child={$value['chr']}" class="list-group-item">{$value['title']}</a>
+  <a href="/lm/view?chr={$res['chr']}&child={$value['chr']}" class="list-group-item">{$value['title']}</a>
   {/foreach}
 </div>  
   

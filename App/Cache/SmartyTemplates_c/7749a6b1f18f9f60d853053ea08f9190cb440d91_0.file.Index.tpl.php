@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-21 19:34:55
+/* Smarty version 3.1.29, created on 2016-06-28 17:52:38
   from "E:\GraceEasy\App\Views\Lm\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5769265f3ff3b0_79631281',
+  'unifunc' => 'content_577248e69a3865_87702754',
   'file_dependency' => 
   array (
     '7749a6b1f18f9f60d853053ea08f9190cb440d91' => 
     array (
       0 => 'E:\\GraceEasy\\App\\Views\\Lm\\Index.tpl',
-      1 => 1466504957,
+      1 => 1467107511,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5769265f3ff3b0_79631281 ($_smarty_tpl) {
+function content_577248e69a3865_87702754 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -68,6 +68,7 @@ function content_5769265f3ff3b0_79631281 ($_smarty_tpl) {
   <li><a href="/">首页</a></li>
   <li><a href="javascript:void(0)"><?php echo $_smarty_tpl->tpl_vars['res']->value['title'];?>
 </a></li>
+  <li><a href="/admin/logout">登出</a></li>
 </ol>  
 <div class="list-group">
   <?php
@@ -84,7 +85,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['value']->_loop = true;
 $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['value'];
 ?>
-  <a href="lm/view?chr=<?php echo $_smarty_tpl->tpl_vars['res']->value['chr'];?>
+  <a href="/lm/view?chr=<?php echo $_smarty_tpl->tpl_vars['res']->value['chr'];?>
 &child=<?php echo $_smarty_tpl->tpl_vars['value']->value['chr'];?>
 " class="list-group-item"><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 </a>

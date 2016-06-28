@@ -14,6 +14,7 @@
 </head>
 <body class="skin-black">
 <p>导航 : <a href="/admin/">index</a>-&gt; </p>
+<a href="/admin/logout">登出</a>
 <table width="50%" border="1">
   <tr>
     <td width="60">sort</td>

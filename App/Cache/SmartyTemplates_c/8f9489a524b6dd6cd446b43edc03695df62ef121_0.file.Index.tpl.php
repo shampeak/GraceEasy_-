@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-22 10:20:14
+/* Smarty version 3.1.29, created on 2016-06-28 18:00:57
   from "E:\GraceEasy\App\Views\Home\Index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5769f5de351900_94508420',
+  'unifunc' => 'content_57724ad97a5e32_53759196',
   'file_dependency' => 
   array (
     '8f9489a524b6dd6cd446b43edc03695df62ef121' => 
     array (
       0 => 'E:\\GraceEasy\\App\\Views\\Home\\Index.tpl',
-      1 => 1466562002,
+      1 => 1467108054,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5769f5de351900_94508420 ($_smarty_tpl) {
+function content_57724ad97a5e32_53759196 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -64,9 +64,12 @@ function content_5769f5de351900_94508420 ($_smarty_tpl) {
   <div class="col-md-12" id="te">
   
 <div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
+  <ol class="breadcrumb ">
+  <li><a href="javascript:void(0)" >
     Shampeak's PHP之道
-  </a>
+  </a></li>
+  <li><a href="/admin/logout">登出</a></li>
+  </ol>
   <?php
 $_from = $_smarty_tpl->tpl_vars['res']->value['list'];
 if (!is_array($_from) && !is_object($_from)) {

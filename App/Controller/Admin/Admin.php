@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 
+use App\Model\LoginModel;
+
 class Admin extends BaseController {
 
     private $storeroot = "../Store/";
@@ -14,7 +16,7 @@ class Admin extends BaseController {
 
     public function doLmPost()
     {
-        Model('login')->iflogin();
+        Model('login')->isLoginRedirect('/admin/login');
 //paixu$list
         $res = req('Post');
         $list = $_POST['list'];
@@ -34,7 +36,7 @@ class Admin extends BaseController {
     //对栏目进行设置
     public function doLm()
     {
-        Model('login')->iflogin();
+        Model('login')->isLoginRedirect('/admin/login');
         $chr = req('Get')['chr'];
         $resindex = Model('md')->getar();
         $info = $resindex['list'][$chr];
@@ -55,7 +57,7 @@ class Admin extends BaseController {
     //首页响应
     public function doIndexPost()
     {
-        Model('login')->iflogin();
+        Model('login')->isLoginRedirect('/admin/login');
         //paixu$list
         $res = $_POST;
         $list = $_POST['list'];
@@ -77,7 +79,7 @@ class Admin extends BaseController {
     //首页的
     public function doIndex()
     {
-        Model('login')->iflogin();
+        Model('login')->isLoginRedirect('/admin/login');
         $res = Model('md')->getar();
         // D($res);
 
@@ -104,17 +106,16 @@ class Admin extends BaseController {
     //响应登录
     public function doLoginPost()
     {
-        $user = array("irones"=>"irones");
-        $loginName = req('Post')['userName'];
-        $loginPsd  = req('Post')['password'];
-        $cookiePsd = app('cookies')->get($loginName);
-        //D($cookiePsd);
-        if($cookiePsd&&$cookiePsd==$loginPsd)R('/home/index');
-        if($user[$loginName] == $loginPsd){
-            app('cookies')->set('irones',$loginPsd);
-            R('/home/index');
-        }
-        R('/admin/login');
+        $password = req('Post')['password'];
+        $user = ['adminName'=>'irones','password'=>'irones'];
+        $login = new LoginModel($user);
+        $login->auth($password)?header('Location: ' . '/home/index'):header('Location: ' . '/admin/login');
+    }
+    //登出
+    public function doLogout()
+    {
+        $login = new LoginModel();
+        $login->logout('/admin/login');
     }
 
 
