@@ -35,15 +35,15 @@
           
         <ol class="breadcrumb">
           <li><a href="/">首页</a></li>
-          <li><a href="http://ge.so/lm?chr={$chr}">{$res['title']}</a></li>
+          <li><a href="/lm?chr={$chr}">{$res['title']}</a></li>
           <li><a href="javascript:void(0)">{$res['list'][$child]['title']}</a></li>
         </ol>  
         
 <nav>
   <ul class="pagination">
-    <li>{if $page[0] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[0]}">上一页</a>{/if}</li>
+    <li>{if $page[0] != ''}<a href="/lm/view?chr={$chr}&child={$page[0]}">上一页</a>{/if}</li>
     <li><a href="javascript:void(0)">{$res['list'][$page[1]]['title']}</a></li>
-    <li>{if $page[2] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[2]}">下一页</a>{/if}</li>
+    <li>{if $page[2] != ''}<a href="/lm/view?chr={$chr}&child={$page[2]}">下一页</a>{/if}</li>
   </ul>
 </nav> 
         
@@ -59,9 +59,9 @@
       
 <nav>
   <ul class="pagination">
-    <li>{if $page[0] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[0]}">上一页</a>{/if}</li>
+    <li>{if $page[0] != ''}<a href="/lm/view?chr={$chr}&child={$page[0]}">上一页</a>{/if}</li>
     <li><a href="javascript:void(0)">{$res['list'][$page[1]]['title']}</a></li>
-    <li>{if $page[2] != ''}<a href="/lm/view?chr=phpzhidao&child={$page[2]}">下一页</a>{/if}</li>
+    <li>{if $page[2] != ''}<a href="/lm/view?chr={$chr}&child={$page[2]}">下一页</a>{/if}</li>
   </ul>
 </nav>      
       

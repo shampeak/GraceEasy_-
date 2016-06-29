@@ -125,7 +125,7 @@ if($this->chr == 'Index'){
             }
 
         }else{
-            $dirall = scandir($this->storeroot.$this->chr.'/');
+            $dirall = @scandir($this->storeroot.$this->chr.'/');
             foreach($dirall as $v){
                 if(strpos($v,'.md'))
                     $res[] = trim($v,'.md');
@@ -152,7 +152,7 @@ if($this->chr == 'Index'){
         }else{
             $file = $this->storeroot.$this->chr.'/Index.json';
         }
-        $_res = file_get_contents($file);
+        $_res = @file_get_contents($file);
         $res = json_decode($_res,true);
         $this->jsonfile = $res;
         return $this;
