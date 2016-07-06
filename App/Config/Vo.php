@@ -17,11 +17,7 @@ return [
     ],
 
     'Providers'=>[
-        'Ap'        => Grace\Ap\Ap::class,               //操作流对象
         'Wise'      => Grace\Wise\Wise::class,           //memcache对象
-        'Pdo'       => Grace\Pdo\Pdo::class,             //
-        'Pdopool'   => Grace\Pdo\Pdopool::class,         //
-        'Dsn'       => Grace\Pdo\Dsn::class,             //
         'Req'       => Grace\Req\Req::class,             //
         'View'      => Grace\View\View::class,           //
         'Smarty'    => Grace\Smarty\Smarty::class,           //

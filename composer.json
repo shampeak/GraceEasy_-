@@ -21,8 +21,7 @@
         "files": ["src/Helper.php"],
         "psr-4":{
             "Grace\\": "src",
-            "App\\": "App",
-	    "Michelf\\":"App\\Library\\Michelf"
+            "App\\": "App"
         }
     }
 }
