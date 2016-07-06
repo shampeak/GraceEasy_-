@@ -10,11 +10,7 @@ class Home extends BaseController {
 
     public function doIndex()
     {
-        $res = Model('md')->getar();
-//D($res);
-        view('',[
-            'res'=> $res
-        ]);
+        echo 'Hello Grace';
     }
 
 }
