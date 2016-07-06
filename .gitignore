@@ -52,5 +52,5 @@ Temporary Items
 .idea
 wwwroot\PhpMyAdmin
 Store
-vendor
+vendor\
 wwwroot/__/

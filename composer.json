@@ -12,7 +12,9 @@
     "minimum-stability": "dev",
     "require": {
         "php" : ">=5.5.9",
-        "lulu/db-driver": "^1.0@dev",
+        "lulu/db-driver": "^1.0@dev"
+    },
+    "require-dev": {
         "erusev/parsedown": "^1.6"
     },
     "autoload":{
