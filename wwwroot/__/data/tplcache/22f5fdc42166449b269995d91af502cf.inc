@@ -1,1 +1,0 @@
-<li class="lie"><a href="/cpzs">[field:image/]</a></li>

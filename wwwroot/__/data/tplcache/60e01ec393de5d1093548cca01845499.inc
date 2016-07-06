@@ -1,1 +1,0 @@
-<li class="lie"><a href="/gywm">[field:image/]</a></li>

@@ -1,1 +1,0 @@
-<li class="e"><a href="/xwdt/qyxw/">[field:image/]</a></li>

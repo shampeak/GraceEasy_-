@@ -1,1 +1,0 @@
-<li><a style="color:#444; font-size:14px;" href="[field:arcurl/]"><span style="float:right; font-size:14px;">[field:pubdate function="GetDateTimeMK(@me)"/]</span><font style="color:;">[field:title/]</font></a></li>
