@@ -10,13 +10,13 @@ class Home extends BaseController {
 
     public function doIndex()
     {
-        echo 'Hello doIndex';
-
-        //$res = app('db')->getall('select * from dy_use2r ');
-        $res = app('pdo')->getall('select * from dy_user ');
-
-        D($res);
-
+//        echo 'Hello doIndex';
+//
+//        //$res = app('db')->getall('select * from dy_use2r ');
+//        $res = app('pdo')->getall('select * from dy_user ');
+//
+//        D($res);
+        view();
 
     }
 
