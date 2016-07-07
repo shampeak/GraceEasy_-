@@ -23,29 +23,7 @@
   </head>
   <body>
   
-
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-md-12" id="te">
-  
-<div class="list-group">
-  <a href="javascript:void(0)" class="list-group-item active">
-    PHP之路
-  </a>
-  {foreach from=$res['list'] key=key item=value name=foo}
-  <a href="lm?chr={$value['chr']}" class="list-group-item">{$value['title']}</a>
-  {/foreach}
-</div>  
-  
-
-  </div>
-</div>
-
-
-
-</div>
-
+qwqwwqe
 
 
   </body>

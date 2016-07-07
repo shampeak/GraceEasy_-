@@ -10,7 +10,17 @@ class Home extends BaseController {
 
     public function doIndex()
     {
-        echo 'Hello Grace';
+        echo 'Hello doIndex';
+
+
     }
+
+    public function doIndex_pe()
+    {
+        echo 'Hello doIndex_pe';
+        view();
+
+    }
+
 
 }
