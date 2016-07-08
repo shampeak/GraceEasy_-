@@ -4,9 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0bb10bf9573df0f3bd50061fa521f551",
-    "content-hash": "55cd526c900fff96d9149bf0c287fda0",
+    "hash": "1cc22406ce98b7ef8929f4fbe7e1186b",
+    "content-hash": "51df4ac13b7a1c55f4b73ec536c87742",
     "packages": [
+        {
+            "name": "grace/pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shampeak/GracePack.git",
+                "reference": "e0b44a2832d334ee0268301d46b77e8210a8bbc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shampeak/GracePack/zipball/e0b44a2832d334ee0268301d46b77e8210a8bbc2",
+                "reference": "e0b44a2832d334ee0268301d46b77e8210a8bbc2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Grace\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "shampeak",
+                    "email": "shampeak@sina.com"
+                }
+            ],
+            "description": "dev",
+            "time": "2016-07-08 02:21:48"
+        },
         {
             "name": "lulu/db",
             "version": "v1.0.1",
@@ -96,7 +132,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "grace/pack": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
