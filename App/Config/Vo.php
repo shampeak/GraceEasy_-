@@ -26,8 +26,8 @@ return [
         'Markdown'  => Michelf\Markdown::class,
         'Cookies'   => Grace\Cookies\Cookies::class,
         'Adminauth' => Grace\Adminauth\Adminauth::class,
+        'Parsedown' => Parsedown::class,
 //        'Db'        => Grace\Db\Db::class,           //
-//        'Parsedown' => Parsedown::class,
     ],
 
 ];

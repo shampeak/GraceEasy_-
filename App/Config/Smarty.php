@@ -7,7 +7,6 @@
 
 return [
 
-        'smartyFile'    => APPROOT.'Library/Smarty/Smarty.class.php',
         'TemplateDir'   => APPROOT.'Views/',
         'ConfigDir'     => APPROOT.'Views/SmartyConfigs/',
         'CompileDir'    => APPROOT.'Cache/SmartyTemplates_c/',

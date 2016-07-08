@@ -13,8 +13,11 @@
     "require": {
         "php" : ">=5.5.9",
         "lulu/db": "v1.0.1",
-        "grace/pack": "v1.0.0.x-dev",
-        "lulu/table": "v1.0"
+        "lulu/table": "v1.0",
+        "grace/pack": "v1.0.1.x-dev",
+	    "smarty/smarty": "~3.1",
+        "michelf/php-markdown": "1.6.0",
+        "erusev/parsedown": "^1.6"
     },
     "autoload":{
         "files": ["App/Helper.php"],
