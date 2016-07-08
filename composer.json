@@ -15,9 +15,6 @@
         "lulu/db": "v1.0.1",
         "grace/pack": "dev-master"
     },
-    "require-dev": {
-        "erusev/parsedown": "^1.6"
-    },
     "autoload":{
         "files": ["App/Helper.php"],
         "psr-4":{
