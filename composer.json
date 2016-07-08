@@ -12,15 +12,12 @@
     "minimum-stability": "dev",
     "require": {
         "php" : ">=5.5.9",
-        "lulu/db": "v1.0.1"
-    },
-    "require-dev": {
-        "erusev/parsedown": "^1.6"
+        "lulu/db": "v1.0.1",
+        "grace/pack": "dev-master"
     },
     "autoload":{
-        "files": ["src/Helper.php"],
+        "files": ["App/Helper.php"],
         "psr-4":{
-            "Grace\\": "src",
             "App\\": "App"
         }
     }
