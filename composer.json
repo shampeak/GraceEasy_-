@@ -13,7 +13,8 @@
     "require": {
         "php" : ">=5.5.9",
         "lulu/db": "v1.0.1",
-        "grace/pack": "v1.0.0.x-dev"
+        "grace/pack": "v1.0.0.x-dev",
+        "lulu/table": "v1.0"
     },
     "autoload":{
         "files": ["App/Helper.php"],
