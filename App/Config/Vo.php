@@ -14,6 +14,7 @@ return [
         'Db'       => '../App/Config/Db.php',
         'Cookies'  => '../App/Config/Cookies.php',
         'Adminauth'  => '../App/Config/Adminauth.php',
+        'Simulation'  => '../App/Config/Simulation.php',
     ],
 
     'Providers'=>[
@@ -27,6 +28,7 @@ return [
         'Cookies'   => Grace\Cookies\Cookies::class,
         'Adminauth' => Grace\Adminauth\Adminauth::class,
         'Parsedown' => Parsedown::class,
+        'Simulation'=> Grace\Simulation\Simulation::class,
 //        'Db'        => Grace\Db\Db::class,           //
     ],
 
