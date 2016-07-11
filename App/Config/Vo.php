@@ -15,6 +15,7 @@ return [
         'Cookies'  => '../App/Config/Cookies.php',
         'Adminauth'  => '../App/Config/Adminauth.php',
         'Simulation'  => '../App/Config/Simulation.php',
+        'Mmcfile'  => '../App/Config/Mmcfile.php',
     ],
 
     'Providers'=>[
@@ -29,6 +30,7 @@ return [
         'Adminauth' => Grace\Adminauth\Adminauth::class,
         'Parsedown' => Parsedown::class,
         'Simulation'=> Grace\Simulation\Simulation::class,
+        'Mmcfile'   => Grace\Mmcfile\Mmcfile::class,
 //        'Db'        => Grace\Db\Db::class,           //
     ],
 

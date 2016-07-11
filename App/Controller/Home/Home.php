@@ -16,7 +16,9 @@ class Home extends BaseController {
 //        $res = app('pdo')->getall('select * from dy_user ');
 //
 //        D($res);
-        view();
+
+        $mc = app('Simulation')->test('user.ma');
+        //view();
 
     }
 

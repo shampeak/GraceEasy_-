@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "21715db17836817f1c82f55f29714d34",
-    "content-hash": "f73ffd6ad72fc0a1bce6b2defdd7933e",
+    "hash": "e3ffe4682f9355cc462132817e1a1191",
+    "content-hash": "b38835207424db57b89a16eb4a5fd0ee",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -48,16 +48,16 @@
         },
         {
             "name": "grace/pack",
-            "version": "v1.0.1.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shampeak/GracePack.git",
-                "reference": "6d97e2fb569d9264830359d7247820817d056d85"
+                "reference": "c5a1f414a0db21dc619a608bfb73b3be744e40e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shampeak/GracePack/zipball/6d97e2fb569d9264830359d7247820817d056d85",
-                "reference": "6d97e2fb569d9264830359d7247820817d056d85",
+                "url": "https://api.github.com/repos/shampeak/GracePack/zipball/c5a1f414a0db21dc619a608bfb73b3be744e40e7",
+                "reference": "c5a1f414a0db21dc619a608bfb73b3be744e40e7",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +80,7 @@
                 }
             ],
             "description": "dev",
-            "time": "2016-07-08 07:10:16"
+            "time": "2016-07-11 03:45:18"
         },
         {
             "name": "lulu/db",
